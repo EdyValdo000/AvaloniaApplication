@@ -1,0 +1,92 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="AvaloniaApplication.MainWindow"
+        Title="Aventura Infantil"
+        Background="#FF6FA8DC"
+        FontFamily="Comic Sans MS"
+        FontSize="18">
+
+	<Grid>
+		<!-- Layout em colunas e linhas para organizar os elementos -->
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+
+		<!-- Cabeçalho com título -->
+		<TextBlock Text="Bem-vindo ao Mundo Mágico!"
+                   Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="40"
+                   Foreground="White"
+                   FontWeight="Bold"
+                   Margin="20"/>
+
+		<!-- Área de conteúdo com uma imagem e texto -->
+		<Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                Background="#FFB3D9FF"
+                CornerRadius="20"
+                Margin="20"
+                Padding="20">
+			<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+				<TextBlock Text="Vamos aprender e nos divertir!"
+                           HorizontalAlignment="Center"
+                           Foreground="#FF333333"
+                           FontSize="28"/>
+			</StackPanel>
+		</Border>
+
+		<!-- Botões de ação -->
+		<StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" Spacing="20">
+			<Button Content="Aprender"
+                    Background="#FF4CAF50"
+                    Foreground="White"
+                    FontSize="24"
+                    Padding="10"
+                    Width="150"
+                    CornerRadius="10">
+				<Button.Styles>
+					<Style Selector="Button:pointerover">
+						<Setter Property="Background" Value="#FF388E3C"/>
+					</Style>
+				</Button.Styles>
+			</Button>
+
+			<Button Content="Teste"
+                    Background="#FFE91E63"
+                    Foreground="White"
+                    FontSize="24"
+                    Padding="10"
+                    Width="150"
+                    CornerRadius="10"
+					Click="Button_Click">
+				<Button.Styles>
+					<Style Selector="Button:pointerover">
+						<Setter Property="Background" Value="#FFC2185B"/>
+					</Style>
+				</Button.Styles>
+			</Button>
+
+			<Button Content="Definições"
+                    Background="#FFE91E63"
+                    Foreground="White"
+                    FontSize="24"
+                    Padding="10"
+                    Width="150"
+                    CornerRadius="10">
+				<Button.Styles>
+					<Style Selector="Button:pointerover">
+						<Setter Property="Background" Value="#FFC2185B"/>
+					</Style>
+				</Button.Styles>
+			</Button>
+
+		</StackPanel>
+	</Grid>
+</Window>
