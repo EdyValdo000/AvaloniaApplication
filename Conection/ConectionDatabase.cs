@@ -15,9 +15,14 @@ public partial class ConectionDatabase
 
     public ConectionDatabase()
     {
-        var local = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "sino2025.db3");
+        var local = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "mari.db3");
         database = new SQLiteAsyncConnection(local);
 
         database.CreateTableAsync<Coisa>().Wait();
+        
+        database.CreateTableAsync<Audio>().Wait();
+        database.CreateTableAsync<Categoria>().Wait();
+        database.CreateTableAsync<Imagem>().Wait();
+        database.CreateTableAsync<Utilizador>().Wait();
     }
 }
