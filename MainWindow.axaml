@@ -44,13 +44,16 @@
 
 		<!-- Botões de ação -->
 		<StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" Spacing="20">
+			
 			<Button Content="Aprender"
                     Background="#FF4CAF50"
                     Foreground="White"
                     FontSize="24"
                     Padding="10"
                     Width="150"
-                    CornerRadius="10">
+                    CornerRadius="10"
+					Click="Button_Click"
+					CommandParameter="lerning">
 				<Button.Styles>
 					<Style Selector="Button:pointerover">
 						<Setter Property="Background" Value="#FF388E3C"/>
@@ -65,7 +68,8 @@
                     Padding="10"
                     Width="150"
                     CornerRadius="10"
-					Click="Button_Click">
+					Click="Button_Click"
+					CommandParameter="test">
 				<Button.Styles>
 					<Style Selector="Button:pointerover">
 						<Setter Property="Background" Value="#FFC2185B"/>
@@ -79,7 +83,9 @@
                     FontSize="24"
                     Padding="10"
                     Width="150"
-                    CornerRadius="10">
+                    CornerRadius="10"
+					Click="Button_Click"
+					CommandParameter="definition">
 				<Button.Styles>
 					<Style Selector="Button:pointerover">
 						<Setter Property="Background" Value="#FFC2185B"/>

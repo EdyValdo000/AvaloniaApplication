@@ -1,16 +1,13 @@
 ﻿using SQLite;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AvaloniaApplication.Model;
 
 public class Imagem
 {
-    [PrimaryKey, AutoIncrement] public int Id { get; set; }
-    public string? Nome { get; set; }
-    public int CategoriaId { get; set; }
-    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    [PrimaryKey, AutoIncrement] public int Id { get; set; } // Chave primária
+    public string? Nome { get; set; } // Nome da imagem
+    public int CategoriaId { get; set; } // ID da categoria associada
+    public string? CaminhoFoto { get; set; } // Caminho completo da foto no sistema de arquivos
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow; // Data de criação
 }

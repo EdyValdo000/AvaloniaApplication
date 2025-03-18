@@ -22,4 +22,11 @@
     <PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
     <PackageReference Include="System.Speech" Version="9.0.3" />
   </ItemGroup>
+
+	<ItemGroup>
+		<None Update="Imagens\**">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+	
 </Project>

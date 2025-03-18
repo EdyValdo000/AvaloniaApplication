@@ -4,6 +4,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="AvaloniaApplication.DefinitionWindow"
-        Title="DefinitionWindow">
-  Welcome to Avalonia!
+        Title="Definições">
+
+	<DockPanel>
+		<!-- Barra de título -->
+		<TextBlock DockPanel.Dock="Top" Text="Definições"
+                   FontSize="20" HorizontalAlignment="Center" Margin="10" />
+
+		<!-- Lista de categorias -->
+		<ListBox Name="CategoryListBox" DockPanel.Dock="Left" Width="200" Margin="10"
+                 SelectionChanged="OnCategorySelectionChanged">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
+
+		<!-- Botões para gerenciar categorias -->
+		<StackPanel DockPanel.Dock="Left" Width="100" Margin="10">
+			<Button Content="Adicionar Categoria" Margin="0,5" Click="OnAddCategoryClick" />
+			<Button Content="Editar Categoria" Margin="0,5" Click="OnEditCategoryClick" />
+			<Button Content="Excluir Categoria" Margin="0,5" Click="OnDeleteCategoryClick" />
+		</StackPanel>
+
+		<!-- Lista de fotos da categoria selecionada -->
+		<ListBox Name="PhotoListBox" DockPanel.Dock="Right" Width="200" Margin="10"
+                 SelectionChanged="OnPhotoSelectionChanged">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
+
+		<!-- Botões para gerenciar fotos -->
+		<StackPanel DockPanel.Dock="Right" Width="100" Margin="10">
+			<Button Content="Adicionar Foto" Margin="0,5" Click="OnAddPhotoClick" />
+			<Button Content="Editar Foto" Margin="0,5" Click="OnEditPhotoClick" />
+			<Button Content="Excluir Foto" Margin="0,5" Click="OnDeletePhotoClick" />
+		</StackPanel>
+
+		<!-- Área de detalhes da categoria ou foto selecionada -->
+		<StackPanel DockPanel.Dock="Bottom" Margin="10">
+			<TextBlock Name="DetailsTextBlock" Text="Selecione uma categoria ou foto para ver os detalhes." />
+		</StackPanel>
+	</DockPanel>
 </Window>
